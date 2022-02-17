@@ -60,30 +60,6 @@ Display the predicted_class.
 
 ## Program:
 ```
-"Cars.Csv"
-V\import pandas as pd
-from sklearn import linear_model
-import matplotlib.pyplot as plt
-
-df=pd.read_csv("cars.csv")
-
-X=df[['Weight','Volume']]
-y=df['CO2']
-
-regr = linear_model.LinearRegression()
-regr.fit(X,y)
-
-#Coefficients and intercepts of Model
-
-print('Coefficients: ', regr.coef_)
-print('Intercept:',regr.intercept_)
-
-#predict the c02 emission of a car where the weight is 300kg,and the volume is 1300cm3
-
-predictedCO2= regr.predict([[330,130]])
-
-print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
-
 "Clustering.Csv"
 import pandas as pd
 import matplotlib.pyplot as plt
